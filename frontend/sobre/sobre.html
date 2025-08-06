@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <style type="text/tailwindcss">
+      @theme {
+         --color-dark-blue: hsl(222, 47%, 11%);
+         --color-light-blue: hsl(203, 100%, 48%);
+         --color-medium-blue: hsl(238, 39%, 25%);
+         --color-blur-blue: hsl(230, 36%, 22%);
+         --color-background: hsl(219, 38%, 15%);
+      }
+   </style>
+   <title>Sobre Nós</title>
+</head>
+<body class="h-full bg-background flex flex-col overflow-x-hidden scroll-smooth">
+   <nav class="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-32 w-full sticky top-0 z-50 h-16">
+      <!-- Logo da Navbar -->
+      <a href="./home.html" class="flex items-center space-x-2 group">
+      <div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center">
+         <img src="../src/gamepad-2-branco.svg" alt="gamepad-logo" class="w-5 h-5">
+      </div>
+      <span class="text-xl font-bold text-cyan-500">GameVault</span>
+      </a>
+
+      <!-- Botões da Navbar -->
+      <div id="navbar-content" class="hidden flex-col gap-2 absolute top-16 left-0 w-full bg-slate-900/95 px-4 py-4 md:static md:flex md:flex-row md:items-center md:gap-4 md:w-auto md:py-0 md:px-0">
+      <div id="menu" class="flex flex-col md:flex-row gap-2 w-full md:w-auto"></div>
+
+      <!-- Botão de Login com Dropdown -->
+   <div class="relative select-none w-full md:w-auto" id="dropdownButton">
+   <div onclick="toggleDropdownButton()" class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-cyan-500/20 rounded-lg px-3 py-2 cursor-pointer flex items-center gap-2 text-cyan-400 w-full md:w-auto">
+      <img src="../src/user-azul.svg" class="w-4 h-4" alt="user-icon">
+      <p class="text-white">Login</p>
+      <img src="../src/chevron-down-azul.svg" class="w-4 h-4" alt="chevron-icon">
+   </div>
+
+   <!-- Dropdown (mobile: static | desktop: absolute) -->
+   <div class="hidden mt-2 md:mt-0 md:absolute md:top-12 md:right-0 bg-slate-800 border border-slate-700 rounded-lg w-full md:w-max py-2 px-2 flex-col gap-2 shadow-lg z-50" id="dropdownOptions">
+      <a href="../../admin/login.php" class="hover:bg-slate-700 cursor-pointer rounded p-2 flex flex-row gap-2 items-center text-white">
+      <img src="../src/shield-user.svg" alt="admin">
+      <p>Administrador</p>
+      </a>
+   </div>
+   </div>
+      </div>
+
+      <!-- Botão Hamburguer (mobile) -->
+      <button id="menu-toggle" class="md:hidden text-cyan-400 focus:outline-none" aria-label="Abrir menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      </button>
+   </nav>
+
+   <main>
+      <section class="flex flex-col justify-center items-center p-6 sm:p-10 md:p-16 gap-8 text-center">
+         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold break-words bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Nossa História</h1>
+         <p class="text-base sm:text-lg md:text-xl text-slate-300 w-full sm:w-4/5 md:w-3/5">Fundada em 2025, a GameVault nasceu do sonho de criar uma loja pensada para os gamers, que conecta apaixonados por jogos aos melhores títulos, com um atendimento que entende e valoriza quem joga.</p>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 px-6 sm:px-10 md:px-16">
+         <div class="flex flex-col justify-center items-center md:items-end gap-8" id="infos"></div>
+         <div>
+            <h1 class="text-white text-2xl sm:text-3xl font-bold pb-6 text-center md:text-left">Nossa Missão</h1>
+            <div class="w-full sm:w-5/6 md:w-4/6 mx-auto md:mx-0 flex flex-col justify-center items-center gap-4" id="mission"></div>
+         </div>
+      </section>
+
+      <section class="flex flex-col justify-center items-center px-6 sm:px-10 md:px-16 pb-12">
+         <h1 class="text-3xl sm:text-4xl font-bold text-white pb-8 text-center">Nossos Fundadores</h1>
+         <div id="fundador" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full"></div>
+      </section>
+   </main>
+
+   <script src="sobre.js"></script>
+   <script src="https://unpkg.com/lucide@latest"></script>
+</body>
+</html>
