@@ -1,0 +1,50 @@
+body {
+  background: linear-gradient(120deg, #24243e 0%, #302b63 60%, #0f0c29 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.welcome-card {
+  background: #fff;
+  box-shadow: 0 4px 32px #0003;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  max-width: 430px;
+  width: 100%;
+  margin-top: 110px;
+  text-align: center;
+  animation: fadeIn 0.9s;
+}
+
+.welcome-card h2 {
+  color: #302b63;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.welcome-card p {
+  color: #444;
+  font-size: 1.12rem;
+  margin-bottom: 2px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(16px);}
+  100% { opacity: 1; transform: none;}
+}
+
+.menu-area {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}

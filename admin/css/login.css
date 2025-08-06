@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #24243e 0%, #302b63 60%, #0f0c29 100%);
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.login-card {
+  width: 95%;
+  max-width: 400px;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem; /* 16px */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-title {
+  color: #302b63;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
